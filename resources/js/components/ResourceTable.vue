@@ -164,7 +164,12 @@ export default {
 			try {
 				const response = await Nova.request().post(
 					`/nova-vendor/nova-sortable/${this.resourceName}/sortable`,
-					{items}
+					{
+						items,
+						viaResource: this.viaResource,
+						viaResourceId: this.viaResourceId,
+						isViaManyToMany: this.viaManyToMany
+					}
 				)
 
 				this.$toasted.show(
