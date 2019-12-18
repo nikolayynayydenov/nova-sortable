@@ -21,3 +21,5 @@ trait SortableTrait
 		return $query->orderBy(static::orderColumnName(), $direction);
 	}
 }
+
+// Nikolay changes
